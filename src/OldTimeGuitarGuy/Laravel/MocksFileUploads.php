@@ -21,7 +21,7 @@ trait MocksFileUploads
         $mime = finfo_file($fileInfo, $path);
 
         return new UploadedFile(
-            $path, null, $mime, null, null, true
+            $path, null, $mime, filesize($path), null, true
         );
     }
 }
